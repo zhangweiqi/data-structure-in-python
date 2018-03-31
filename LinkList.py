@@ -1,17 +1,17 @@
 #!/usr/bin/python
 # coding:utf-8
 """
-Á´±í£ºÁ´±íÊÇÓÉÒ»¸ö¸ö½áµã¹¹³ÉµÄ¡£
-Ã¿¸ö½áµã¶¼ÓÉÒ»¸öÊýÖµºÍÒ»¸öÖ¸ÏòÏÂÒ»¸ö½ÚµãµØÖ·µÄÖ¸Õë¹¹³É¡£
-ÒòÎªÖ¸ÕëÖ¸ÏòµÄÊÇÏÂÒ»¸ö½ÚµãµÄµØÖ·£¬ËùÒÔ½áµãµÄµØÖ·¶¼ÊÇËæ»úµÄÕûÊý¡£
-Á´±íµÄ±íÍ·ÎªÁ´±íµÄÍ·Ö¸ÕëÖ¸ÏòµÄµØÖ·¡£
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã¹¹ï¿½ÉµÄ¡ï¿½
+Ã¿ï¿½ï¿½ï¿½ï¿½ã¶¼ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ò»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµï¿½ï¿½Ö·ï¿½ï¿½Ö¸ï¿½ë¹¹ï¿½É¡ï¿½
+ï¿½ï¿½ÎªÖ¸ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµï¿½Äµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Äµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Í·Îªï¿½ï¿½ï¿½ï¿½ï¿½Í·Ö¸ï¿½ï¿½Ö¸ï¿½ï¿½Äµï¿½Ö·ï¿½ï¿½
 
-¸Ã½Å±¾Ê¹ÓÃ ÀàµÄÇ¶Ì× ÊµÏÖÁ´±í¡£½áµãºÍÁ´±í¶¼ÓÉÀàÀ´±íÊ¾¡£
-½áµãÓÐÁ½¸ö±äÁ¿dataºÍnext£¬data´æ´¢Êý¾Ý£¬nextÎªÏÂÒ»¸ö½áµã¡£
-Á´±íÓÐÒ»¸ö±äÁ¿head£¬½«node¸³¸øhead¡£
+ï¿½Ã½Å±ï¿½Ê¹ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dataï¿½ï¿½nextï¿½ï¿½dataï¿½æ´¢ï¿½ï¿½ï¿½Ý£ï¿½nextÎªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ã¡£
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½headï¿½ï¿½ï¿½ï¿½nodeï¿½ï¿½ï¿½ï¿½headï¿½ï¿½
 
-½áµãÊµÏÖ¹¦ÄÜ£º´´½¨½áµã£¨³õÊ¼»¯£©
-Á´±íÊµÏÖ¹¦ÄÜ£º´´½¨Á´±í£¨³õÊ¼»¯£©£¬²åÈë½áµã£¬É¾³ý½Úµã£¬²éÑ¯½áµã£¬³¤¶È£¬ÊÇ·ñÎª¿Õ£¬Çå¿Õ£¬É¾³ý¡£
+ï¿½ï¿½ï¿½Êµï¿½Ö¹ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£¨ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¹ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£¬É¾ï¿½ï¿½ï¿½Úµã£¬ï¿½ï¿½Ñ¯ï¿½ï¿½ã£¬ï¿½ï¿½ï¿½È£ï¿½ï¿½Ç·ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Õ£ï¿½É¾ï¿½ï¿½ï¿½ï¿½
 
 """
 
@@ -19,47 +19,45 @@
 class Node(objec):
     def __init__(self, value, pointer=0):
         """
-        ÓÃ¸ÃÀàÀ´±íÊ¾½áµã£¬dataÎª½áµãµÄÖµ£¬nextÎªÏÂÒ»¸ö½áµã¡£
-        dataÎªint£¬nextÎªÀàNode¡£
+        ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ã£¬dataÎªï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½nextÎªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ã¡£
+        dataÎªintï¿½ï¿½nextÎªï¿½ï¿½Nodeï¿½ï¿½
 
-        ³õÊ¼»¯Ò»¸ö½áµãÊ±£¬Ó¦¸Ã¸ø³ö¸Ã½áµãµÄÖµ¡£
+        ï¿½ï¿½Ê¼ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ó¦ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½Öµï¿½ï¿½
         """
         self.data = value
         self.next = pointer
 
 
-
 class LinkList(object):
     """
-    ÓÃ¸ÃÀàÀ´±íÊ¾Á´±í£¬headÎªÍ·½áµã£¬Ä¬ÈÏÎª0£¬¸³ÓèÖµÖ®ºóÎªÀàNode¡£
+    ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½headÎªÍ·ï¿½ï¿½ã£¬Ä¬ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÖ®ï¿½ï¿½Îªï¿½ï¿½Nodeï¿½ï¿½
     """
+
     def __init__(self):
         """
-        ³õÊ¼»¯Á´±í£¬headÖ¸ÕëÖ¸ÏòµÚÒ»¸ö½áµã¡£
+        ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½headÖ¸ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ã¡£
         """
         self.head = 0
 
-
     def initlist(self, listdata):
         """
-        ÓÃÁÐ±í³õÊ¼»¯Á´±í£¬ÁÐ±íÖÐµÄÖµÎªÒª¼ÓÈëÁ´±íµÄÁÐ±í¡£
+        ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Ðµï¿½ÖµÎªÒªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
         """
-        #½«Á´±íµÄheadÉèÎªÍ·½áµã
+        # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½headï¿½ï¿½ÎªÍ·ï¿½ï¿½ï¿½
         self.head = Node(listdata[0])
         temp = self.head
-        #Ñ­»·Ç¶Ì×
+        # Ñ­ï¿½ï¿½Ç¶ï¿½ï¿½
         for i in listdata[1:]:
-            #³õÊ¼»¯½áµã
+            # ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
             node = Node(i)
-            #Á¬½Ó½áµã
+            # ï¿½ï¿½ï¿½Ó½ï¿½ï¿½
             temp.next = node
-            #ÐÞ¸ÄÑ­»·±äÁ¿
+            # ï¿½Þ¸ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             temp = temp.next
-
 
     def length(self):
         """
-        ´Óhead´¦²éÑ¯Á´±íµÄ³¤¶È£¬Ïòºó²éÕÒ£¬ÈôÄÄ¸ö½áµãµÄnextÎª0£¬ÔòÎª×îºóÒ»¸ö½áµã¡£
+        ï¿½ï¿½headï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò£ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½nextÎª0ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ã¡£
         """
         p = self.head
         length = 0
@@ -68,40 +66,36 @@ class LinkList(object):
             p = p.next
         return length
 
-
     def empty(self):
         """
-        Á´±íÎª¿ÕÔò·µ»ØTrue£¬·ñÔòÎªFalse¡£
+        ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ò·µ»ï¿½Trueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªFalseï¿½ï¿½
         """
         if self.length() == 0:
             return True
         else:
             return False
 
-
     def clear(self):
         """
-        Çå¿ÕÁ´±í
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         """
         self.head = 0
 
-
     def append(self, item):
-        # ¶¨ÒåÐÂµÄ½áµã
+        # ï¿½ï¿½ï¿½ï¿½ï¿½ÂµÄ½ï¿½ï¿½
         new_node = Node(item)
         if self.head == 0:
             self.head = new_node
         else:
-            # ´ÓÍ·¿ªÊ¼ÕÒµ½×îºóÒ»¸ö½áµã£¬È»ºó½ÓÉÏÐÂ½áµã
+            # ï¿½ï¿½Í·ï¿½ï¿½Ê¼ï¿½Òµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ã£¬È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½
             temp = self.head
             while temp.next != 0:
                 temp = temp.next
             temp.next = new_node
 
-
     def getitem(self, index):
         """
-        µÃµ½indexÎ»ÖÃµÄ½áµã
+        ï¿½Ãµï¿½indexÎ»ï¿½ÃµÄ½ï¿½ï¿½
         """
         if self.empty():
             print 'LinkList is empty.'
@@ -119,63 +113,62 @@ class LinkList(object):
         else:
             print 'target is not exist!'
 
-
     def insert(self, index, item):
         """
-        ²åÈë½áµã£¬itemÎªÊýÖµ¡£
+        ï¿½ï¿½ï¿½ï¿½ï¿½ã£¬itemÎªï¿½ï¿½Öµï¿½ï¿½
         """
         if self.empty)():
             print 'LinkList is empty.'
-            return None
+        return None
         elif index > self.length():
-            print 'The index is out of the LinkList.'
-            return None
-        if index == 0:
-            self.head = Node(item, self.head)
-            return None
-        temp = self.head
-        for i in range(index-1):
-            temp = temp.next
-            if temp.next == 0:
-                temp.next = Node(item)
-            else:
-                old_item = temp.next
-                temp.next = Node(item)
-                temp.next.next = old_item
-                return None
+        print 'The index is out of the LinkList.'
+        return None
 
-
-    def delete(self, index):
-        """
-        É¾³ýindexÎ»ÖÃµÄ½áµã
-        """
-        if self.empty() or index < 0 or index >=self.length():
-            print 'Index is out of the range'
-            return None
-        if index == 0:
-            self.head = self.head.next
-        temp = self.head
-        for i in range(index-1):
-            temp = temp.next
-        if temp.next.next == 0:
-            temp.next = 0
+    if index == 0:
+        self.head = Node(item, self.head)
+        return None
+    temp = self.head
+    for i in range(index - 1):
+        temp = temp.next
+        if temp.next == 0:
+            temp.next = Node(item)
         else:
-            temp.next = temp.next.next
-
-
-    def index(self, value):
-        """
-        ²éÑ¯valueÔÚÁ´±íÖÐµÄÎ»ÖÃ
-        """
-        if self.empty():
-            print "LinkList is empty."
+            old_item = temp.next
+            temp.next = Node(item)
+            temp.next.next = old_item
             return None
-        temp = self.head
-        counter = 0
-        while temp.next != 0:
-            if temp.data == value:
-                return counter
-            counter += 1
-            temp = temp.next
-        return 'No value!'
 
+
+def delete(self, index):
+    """
+    É¾ï¿½ï¿½indexÎ»ï¿½ÃµÄ½ï¿½ï¿½
+    """
+    if self.empty() or index < 0 or index >= self.length():
+        print 'Index is out of the range'
+        return None
+    if index == 0:
+        self.head = self.head.next
+    temp = self.head
+    for i in range(index - 1):
+        temp = temp.next
+    if temp.next.next == 0:
+        temp.next = 0
+    else:
+        temp.next = temp.next.next
+
+
+def index(self, value):
+    """
+    ï¿½ï¿½Ñ¯valueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½
+    """
+    if self.empty():
+        print "LinkList is empty."
+        return None
+    temp = self.head
+    counter = 0
+    while temp.next != 0:
+        if temp.data == value:
+            return counter
+        counter += 1
+        temp = temp.next
+    return 'No value!'

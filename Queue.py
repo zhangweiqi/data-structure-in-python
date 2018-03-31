@@ -2,41 +2,39 @@
 # coding:utf-8
 
 class Queue(object):
-    #³õÊ¼»¯¶ÓÁÐ
+    # ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     def __init__(self):
         self.queue = []
 
-
-    #Èë¶Ó
+    # ï¿½ï¿½ï¿½
     def enqueue(self, item):
         self.queue.append(item)
-    
-    #³ö¶Ó
+
+    # ï¿½ï¿½ï¿½ï¿½
     def dequeue(self):
         if self.queue == []:
             return None
         else:
             return self.queue.pop(0)
 
-    #µÃµ½Í·½áµã
+    # ï¿½Ãµï¿½Í·ï¿½ï¿½ï¿½
     def head(self):
         if self.queue != []:
             return self.queue[0]
         else:
             return None
 
-    #µÃµ½Î²½áµã
+    # ï¿½Ãµï¿½Î²ï¿½ï¿½ï¿½
     def tail(self):
         if self.queue != []:
             return self.queue[-1]
         else:
             return None
 
-    #¶ÓÁÐ²Áº¹¸ßÄÑ¶È
+    # ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½
     def length(self):
         return len(self.queue)
 
-    #ÑéÖ¤ÊÇ·ñÎª¿Õ
+    # ï¿½ï¿½Ö¤ï¿½Ç·ï¿½Îªï¿½ï¿½
     def empty(self):
         return self.queue == []
-
