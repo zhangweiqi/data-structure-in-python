@@ -19,7 +19,7 @@ class Node(object):
     节点类
     """
 
-    def __init__(self, value=None, lchild=None, rchild=None):
+    def __init__(self, value=0, lchild=None, rchild=None):
         self.value = value
         self.lchild = lchild
         self.rchild = rchild
@@ -34,7 +34,6 @@ class Tree(object):
         self.root = Node()
         self.myQueue = []
 
-    '''
     def add(self, elem):
         """
         添加节点
@@ -54,7 +53,6 @@ class Tree(object):
                 treeNode.rchild = node
                 self.myQueue.append(treeNode.rchild)
                 self.myQueue.pop(0)
-    '''
 
     def front_recursion(self, root):
         """
@@ -79,7 +77,6 @@ class Tree(object):
         self.middle_recursion(root.lchild)
         print root.value
         self.middle_recursion(root.rchild)
-
 
     def later_recursion(self, root):
         """
@@ -108,27 +105,76 @@ class Tree(object):
                 myStack.append(node)
                 node = node.lchild
             node = myStack.pop()
-            print node.value
-
-
-
-
-
-
-
+            node = node.rchild
 
     def middle_stack(self, root):
-        pass
+        """
+        堆栈实现中序遍历
+        :param root:
+        :return:
+        """
+        if root == None:
+            return None
+        myStack = []
+        node = root
+        while node or myStack:
+            while node:
+                myStack.append(node)
+                node = node.lchild
+            node = myStack.pop()
+            print node.value
+            node = node.rchild
 
     def later_stack(self, root):
-        pass
+        """
+        堆栈实现后序遍历
+        :param root:
+        :return:
+        """
+        if root == None:
+            return None
+        myStack_1 = []
+        myStack_2 = []
+        node = root
+        myStack_1.append(node)
+        while myStack_1:
+            node = myStack_1.pop()
+            if node.lchild:
+                myStack_1.append(node.lchild)
+            if node.rchild:
+                myStack_1.append(node.rchild)
+            myStack_2.append(node)
+        while myStack_2:
+            print myStack_2.pop().value
 
     def level_queue(self, root):
-        pass
+        """
+        利用队列实现树的层次遍历
+        :param root:
+        :return:
+        """
+        if root == None:
+            return None
+        myQueue = []
+        node = root
+        myQueue.append(node)
+        while myQueue:
+            node = myQueue.pop(0)
+            print node.value
+            if node.lchild != Node:
+                myQueue.append(node.lchild)
+            if node.rchild != Node:
+                myQueue.append(node.rchild)
 
 
 def main():
     pass
+    # elems = range(10)
+    # tree = Tree()
+    # for elem in elems:
+    #     tree.add(elem)
+    #
+    # print
 
 
 if __name__ == "__main__":
